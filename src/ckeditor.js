@@ -14,6 +14,7 @@ import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
+import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
 import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
@@ -41,6 +42,7 @@ ClassicEditor.builtinPlugins = [
 	Strikethrough,
 	BlockQuote,
 	CKFinder,
+	Code,
 	EasyImage,
 	Heading,
 	Image,
@@ -70,10 +72,13 @@ ClassicEditor.defaultConfig = {
 			'link',
 			'bulletedList',
 			'numberedList',
-			'imageUpload',
 			'blockQuote',
+			'code',
 			'insertTable',
+			'|',
+			'imageUpload',
 			'mediaEmbed',
+			'|',
 			'undo',
 			'redo'
 		]
