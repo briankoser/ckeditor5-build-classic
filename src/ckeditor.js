@@ -29,6 +29,8 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import Emoji from '@wwalc/ckeditor5-emoji/src/emoji';
+import PreElement from 'ckeditor5-code-block/src/pre';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -56,7 +58,9 @@ ClassicEditor.builtinPlugins = [
 	Paragraph,
 	PasteFromOffice,
 	Table,
-	TableToolbar
+	TableToolbar,
+	Emoji,
+	PreElement
 ];
 
 // Editor configuration.
@@ -74,6 +78,8 @@ ClassicEditor.defaultConfig = {
 			'numberedList',
 			'blockQuote',
 			'code',
+			'pre',
+			'emoji',
 			'insertTable',
 			'|',
 			'imageUpload',
@@ -98,6 +104,16 @@ ClassicEditor.defaultConfig = {
 			'mergeTableCells'
 		]
 	},
+	emoji: [
+		{ name: 'smile', text: '😀' },
+		{ name: 'wink', text: '😉' },
+		{ name: 'cool', text: '😎' },
+		{ name: 'thinking', text: '🤔' },
+		{ name: 'thumbs up', text: '👍' },
+		{ name: 'thumbs down', text: '👎' },
+		{ name: 'sign of the horns', text: '🤘' },
+		{ name: 'flexed biceps', text: '💪' },
+	],
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };
