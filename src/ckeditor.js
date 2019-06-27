@@ -31,6 +31,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Emoji from '@wwalc/ckeditor5-emoji/src/emoji';
 import PreElement from 'ckeditor5-code-block/src/pre';
+import Hr from '../plugins/ckeditor5-hr/hr/hr';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -60,7 +61,8 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	Emoji,
-	PreElement
+	PreElement,
+	Hr
 ];
 
 // Editor configuration.
@@ -81,6 +83,7 @@ ClassicEditor.defaultConfig = {
 			'pre',
 			'emoji',
 			'insertTable',
+			'horizontalRule',
 			'|',
 			'imageUpload',
 			'mediaEmbed',
